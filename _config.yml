@@ -1,10 +1,10 @@
 # Blog settings
 permalink: /blog/:title
-
+url: http://dropcomputer.com
 
 # My variables
-name: Micah Cowell
-description: Futuristic web design
+name: Drop Computer
+description: Fun with Technology!
 google_verification: null
 
 
