@@ -1,13 +1,13 @@
 ---
 ---
-
-@import "reset";
 @import "config";
+@import "reset";
+@import "syntax";
 
 body {
-	color: $color-black;
-	background: $color-white;
-	font-family: 'Inconsolata', ;
+	color: $color-main;
+	background: $color-bg;
+	font-family: $font-family-main;
 	font-size: 100%;
 	font-weight: 400;
 }
@@ -27,9 +27,7 @@ a {
   }
   &:hover {
 	color: $color-link;
-	text-decoration: none;
-	padding-bottom: 1px;
-	border-bottom: 1px solid $color-link;
+	text-decoration: underline;
   }
   &:active {
 	color: $color-link;
@@ -49,9 +47,9 @@ ul {
 
 
 .wrapper {
-	max-width: 600px;
+	max-width: 960px;
 	margin: auto;
-	padding: 60px 30px 60px 30px;
+	padding: 30px 30px 60px 30px;
 	@media screen and (max-width: $br) {
 		padding: 20px;
 	}
@@ -67,7 +65,8 @@ ul {
 		display: block;
 	}
 	h1 {
-		font-size: 2em;
+		color: $color-link;
+		font-size: 2.0em;
 		margin-bottom: 0;
 	}
 	ul {
@@ -80,11 +79,40 @@ ul {
 	}
 }
 
+.footer {
+	padding-top: 15em;
+	font-size: 0.8em;
+	font-style: italic;
+	text-align: center;
+
+	p {
+		display: inline-block;
+	}
+}
+
+.portfolio {
+	padding-bottom: 30px;
+	h1 {
+		font-size: 1.4em;
+		margin-bottom: 5px;
+	}
+}
+
 .blog {
 	padding-bottom: 30px;
 	h1 {
 		font-size: 1.4em;
 		margin-bottom: 5px;
+	}
+	.date {
+		font-size: 0.8em;
+		margin-right: 4em;
+		@media screen and (max-width: $br) {
+			margin-right: 1em;
+		}
+	}
+	li {
+		font-size: 1.1em;
 	}
 }
 
@@ -102,48 +130,23 @@ ul {
 
 .post {
 	padding-bottom: 30px;
-	&__back {
-		a {
-			
-		}
-	}
 	&__title {
-		display: block;
+		font-size: 1.6em;
+		font-weight: 700;
+		//text-decoration: underline;
 		margin-top: 20px;
-		margin-bottom: 6px;
-		h1 {
-			display: inline-block;
-			font-size: 1.6em;
-			font-weight: 700;
-			padding-right: 10px;
-			padding-bottom: 2px;
-			text-decoration: none;
-			border-bottom: 3px solid $color-black;
-		}
+		margin-bottom: 5px;
 	}
 	&__date {
-		p {
-			font-size: 1em;
-			font-style: italic;
-		}
-	}
-	&__meta {
-		p {
-
-		}
+		font-size: 1em;
+		font-style: italic;
 	}
 	&__content {
 		padding-top: 40px;
 		h1 {
-			font-size: 1.4em;
+			font-size: 1.25em;
 			font-weight: 700;
-			margin-top: 50px;
-			margin-bottom: 10px;
-		}
-		h2 {
-			font-size: 1.1em;
-			font-weight: 700;
-			margin-top: 25px;
+			margin-top: 30px;
 			margin-bottom: 5px;
 		}
 		p {
@@ -152,11 +155,9 @@ ul {
 			margin-bottom: 15px;
 		}
 		a {
-			padding-bottom: 1px;
-			border-bottom: 1px solid $color-link;
+			text-decoration: underline;
 			&:hover {
-				background-color: $color-grey;
-				text-decoration: none;
+				font-weight: bold;
 			}
 		}
 		strong {
@@ -169,8 +170,8 @@ ul {
 			font-size: 1em;
 			list-style: circle;
 			margin-left: 30px;
-			margin-top: -10px;
-			margin-bottom: 15px;
+			margin-top: -5px;
+			margin-bottom: 5px;
 			li {
 				padding: 5px;
 				padding-left: 5px;
@@ -194,7 +195,7 @@ ul {
 			padding: 3px;
 			font-size: 0.9em;
 			border-radius: 3px;
-			background: $color-grey;
+			font-family: $font-family-code;
 		}
 		.highlight {
 			margin: 10px;
@@ -202,16 +203,11 @@ ul {
 			padding: 10px;
 			line-height: 1.5;
 			border-radius: 3px;
-			background: $color-black;
-			code {
-				color: $color-code;
-				background: none;
-			}
 		}
 		.codebreak {
 			margin: 15px;
 			border: 0;
-			border-bottom: 1px dashed $color-black;
+			border-bottom: 1px dashed $color-main;
 		}
 	}
 }
