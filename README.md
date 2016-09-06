@@ -1,15 +1,10 @@
-# getmicah.github.io
-My blog made with [jekyll](http://jekyllrb.com) and hosted with Github Pages.
+# Drop Computer site/blog
+My blog made with [jekyll](http://jekyllrb.com)
 
+## Info
+* Jekyll-based site
+* Based on the design of [@getmicah](https://github.com/getmicah/getmicah.github.io/blob/master/README.md)
 
-### Install
-
-* fork this repository
-* edit the `_config.yml` with your info
-* change the links in `_data/navigation.yml`
-* remove my posts from `_posts/`
-* rename your repo to ***your-username*.github.io**
-
-
-### License
-All this stuff is under the [MIT License](https://raw.githubusercontent.com/getmicah/getmicah.github.io/master/LICENSE)
+## License
+* Site design and implementation modifications licensed under the [MIT License](LICENSE)
+* Unless otherwise noted, the website text, posts, content, screenshots, and other media is licened under Creative Commons [CC BY-NC-SA 4.0](LICENSE-CC)
